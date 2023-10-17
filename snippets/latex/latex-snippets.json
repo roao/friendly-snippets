@@ -417,6 +417,11 @@
         ],
         "description": "Add a case"
     },
+    "Case:Ref": {
+        "prefix": ["case:ref", "ca:"],
+        "body": ["${1:Case}~\\ref{ca:$2}$0"],
+        "description": "Case Reference"
+    },
     "alpha":{
       "prefix": ["alpha","al"],
       "body": "\\alpha"
