@@ -59,7 +59,7 @@
             "",
             "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
             "\\title{${1:Title}}",
-            "\\author{${2:Haoyun Qin}}",
+            "\\author{${2:Yi Fei Liu}}",
             "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
             "",
             "\\begin{document}",
@@ -88,26 +88,6 @@
         "prefix": ["mathcentered", "\\mathcentered"],
         "body": ["$$ $0 $$"],
         "description": "Insert centered Math Environment."
-    },
-    "Section": {
-        "prefix": ["section", "\\section"],
-        "body": ["\\section{$1}$0"],
-        "description": "Insert a new section."
-    },
-    "Subsection": {
-        "prefix": ["subsection", "\\subsection"],
-        "body": ["\\subsection{$1}$0"],
-        "description": "Insert a new subsection."
-    },
-    "Header": {
-        "prefix": ["header", "\\header", "##"],
-        "body": "\\section*{$1}$0",
-        "description": "Insert a section without index."
-    },
-    "Header Small": {
-        "prefix": ["headersmall", "\\headersmall", "###"],
-        "body": "\\subsection*{$1}$0",
-        "description": "Insert a subsection without index."
     },
     "Italic Text": {
         "prefix": ["italic", "\\italic", "*"],
@@ -185,14 +165,14 @@
         "description": "Insert inline integral notation, (only in the cases when the environment is inline math environment)."
     },
     "Inline Fraction": {
-        "prefix": ["fractioninline", "\\fractioninline"],
+        "prefix": ["frac", "\\frac"],
         "body": ["\\frac{$1}{$2}$0"],
         "description": [
             "Insert inline fraction notation, (only in the cases when the environment is inline math environment)."
         ]
     },
     "Large Fraction": {
-        "prefix": ["fractionlarge", "\\fractionlarge"],
+        "prefix": ["fracl", "\\fracl"],
         "body": ["\\displaystyle\\frac{$1}{$2}$0"],
         "description": ["Insert large fraction notation"]
     },

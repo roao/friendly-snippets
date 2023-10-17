@@ -146,7 +146,7 @@
         "desciption": "Ref for Algorithm"
     },
     "Figure:Ref": {
-        "prefix": "figure:ref",
+        "prefix": ["figure:ref", "fig:"],
         "body": ["${1:Figure}~\\ref{fig:$2}$0"],
         "description": "Ref for Figure"
     },
@@ -210,7 +210,7 @@
         "description": "Folding Region End"
     },
     "Section:Ref": {
-        "prefix": "section:ref",
+        "prefix": ["section:ref", "sec:"],
         "body": ["${1:Section}~\\ref{sec:$2}$0"],
         "description": "Section Reference"
     },
@@ -249,6 +249,11 @@
         ],
         "description": "Sub Section"
     },
+    "SubSection:Ref": {
+        "prefix": ["subsection:ref", "ssec:"],
+        "body": ["${1:SubSection}~\\ref{sec:$2}$0"],
+        "description": "SubSection Reference"
+    },
     "Sub Sub Section": {
         "prefix": "subs",
         "body": [
@@ -260,7 +265,7 @@
         "description": "Sub Sub Section"
     },
     "Table:Ref": {
-        "prefix": "table:ref",
+        "prefix": ["table:ref", "tab:"],
         "body": ["${1:Table}~\\ref{tab:$2}$0"],
         "description": "Table Reference"
     },
@@ -277,7 +282,7 @@
         "prefix": "begin",
         "body": [
             "\\\\begin{${1:env}}",
-            "\t${1/(enumerate|itemize|list)|(description)|(.*)/${1:+\\item }${2:+\\item[] }${3:+ }/}$0",
+            "\t$0",
             "\\\\end{${1:env}}"
         ],
         "description": "Begin - End"
@@ -285,11 +290,11 @@
     "Figure": {
         "prefix": "figure",
         "body": [
-            "\\begin{figure}",
+            "\\begin{figure}[${1:htbp}]",
             "\t\\begin{center}",
-            "\t\t\\includegraphics[width=0.95\\textwidth]{figures/$1}",
+            "\t\t\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
             "\t\\end{center}",
-            "\t\\caption{$3}\\label{fig:$4}",
+            "\t\\caption{$4}\\label{fig:$5}",
             "\\end{figure}",
             "$0"
         ],
@@ -399,5 +404,36 @@
         "prefix": "empty",
         "body": ["\\null\\thispagestyle{empty}", "\\newpage", "$0"],
         "description": "Add a empty page"
+    },
+    "Case_mine":{
+        "prefix": "Case",
+        "body": [
+            "\\begin{case}{$1}{$2}",
+            "\t\\begin{itemize}",
+            "\t\t\\item JobID: $3",
+            "\t\t\\item Description: $4",
+            "\t\t\\item The parameters are listed in section \\ref{$5}",
+            "\t\t\\item $6",
+            "\t\\end{itemize}",
+            "\\end{case}",
+            "$0"
+        ],
+        "description": "Add a case"
+    },
+    "alpha":{
+      "prefix": ["alpha","al"],
+      "body": "\\alpha"
+    },
+    "beta":{
+      "prefix": ["beta","be"],
+      "body": "\\beta"
+    },
+    "phi":{
+      "prefix": ["phi","ph"],
+      "body": "\\phi"
+    },
+    "theta":{
+      "prefix": ["theta","th"],
+      "body": "\\theta"
     }
 }
