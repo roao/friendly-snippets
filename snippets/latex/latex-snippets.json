@@ -222,10 +222,9 @@
     "Section": {
         "prefix": "sec",
         "body": [
-            "\\section{$1} % (fold)",
+            "\\section{$1}",
             "\\label{sec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}}",
-            "${0:$TM_SELECTED_TEXT}",
-            "% section $1 (end)"
+            "$0"
         ],
         "description": "Section"
     },
@@ -242,10 +241,9 @@
     "Sub Section": {
         "prefix": "sub",
         "body": [
-            "\\subsection{$1} % (fold)",
+            "\\subsection{$1}",
             "\\label{sub:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}}",
-            "${0:$TM_SELECTED_TEXT}",
-            "% subsection $1 (end)"
+            "$0"
         ],
         "description": "Sub Section"
     },
@@ -257,10 +255,9 @@
     "Sub Sub Section": {
         "prefix": "subs",
         "body": [
-            "\\subsubsection{${1:subsubsection name}} % (fold)",
+            "\\subsubsection{${1:subsubsection name}}",
             "\\label{sec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}}",
-            "${0:$TM_SELECTED_TEXT}",
-            "% subsubsection $1 (end)"
+            "$0"
         ],
         "description": "Sub Sub Section"
     },
