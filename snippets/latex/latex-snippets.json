@@ -53,11 +53,6 @@
         ],
         "description": "Add a Equation"
     },
-    "Display Math — \\[ … \\]": {
-        "prefix": "$$",
-        "body": ["\\[", "\t$TM_SELECTED_TEXT$1", "\\]"],
-        "description": "Display Math"
-    },
     "Theorem": {
         "prefix": "theorem",
         "body": [
@@ -209,11 +204,6 @@
         "body": ["%#Endregion"],
         "description": "Folding Region End"
     },
-    "Section:Ref": {
-        "prefix": ["section:ref", "sec:"],
-        "body": ["${1:Section}~\\ref{sec:$2}$0"],
-        "description": "Section Reference"
-    },
     "Split": {
         "prefix": "spl",
         "body": ["\\begin{split}", "\t$0", "\\end{split}"],
@@ -228,6 +218,11 @@
         ],
         "description": "Section"
     },
+    "Section:Ref": {
+        "prefix": ["sec:ref"],
+        "body": ["${1:Section}~\\ref{sec:$2}$0"],
+        "description": "Section Reference"
+    },
     "Sub Paragraph": {
         "prefix": "subp",
         "body": [
@@ -239,7 +234,7 @@
         "description": "Sub Paragraph"
     },
     "Sub Section": {
-        "prefix": "sub",
+        "prefix": "ssec",
         "body": [
             "\\subsection{$1}",
             "\\label{sub:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}}",
@@ -248,18 +243,23 @@
         "description": "Sub Section"
     },
     "SubSection:Ref": {
-        "prefix": ["subsection:ref", "ssec:"],
-        "body": ["${1:SubSection}~\\ref{sec:$2}$0"],
+        "prefix": ["ssec:ref"],
+        "body": ["${1:SubSection}~\\ref{ssec:$2}$0"],
         "description": "SubSection Reference"
     },
     "Sub Sub Section": {
-        "prefix": "subs",
+        "prefix": "sssec",
         "body": [
             "\\subsubsection{${1:subsubsection name}}",
             "\\label{sec:${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}}",
             "$0"
         ],
         "description": "Sub Sub Section"
+    },
+    "SubSubSection:Ref": {
+        "prefix": ["sssec:ref"],
+        "body": ["${1:SubSubSection}~\\ref{sssec:$2}$0"],
+        "description": "SubSubSection Reference"
     },
     "Table:Ref": {
         "prefix": ["table:ref", "tab:"],
@@ -401,41 +401,5 @@
         "prefix": "empty",
         "body": ["\\null\\thispagestyle{empty}", "\\newpage", "$0"],
         "description": "Add a empty page"
-    },
-    "Case_mine":{
-        "prefix": "Case",
-        "body": [
-            "\\begin{case}{$1}{$2}",
-            "\t\\begin{itemize}",
-            "\t\t\\item JobID: $3",
-            "\t\t\\item Description: $4",
-            "\t\t\\item The parameters are listed in section \\ref{$5}",
-            "\t\t\\item $6",
-            "\t\\end{itemize}",
-            "\\end{case}",
-            "$0"
-        ],
-        "description": "Add a case"
-    },
-    "Case:Ref": {
-        "prefix": ["case:ref", "ca:"],
-        "body": ["${1:Case}~\\ref{ca:$2}$0"],
-        "description": "Case Reference"
-    },
-    "alpha":{
-      "prefix": ["alpha","al"],
-      "body": "\\alpha"
-    },
-    "beta":{
-      "prefix": ["beta","be"],
-      "body": "\\beta"
-    },
-    "phi":{
-      "prefix": ["phi","ph"],
-      "body": "\\phi"
-    },
-    "theta":{
-      "prefix": ["theta","th"],
-      "body": "\\theta"
     }
 }

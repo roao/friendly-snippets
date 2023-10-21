@@ -410,6 +410,10 @@
             },
             {
                 "language": ["plaintex", "tex"],
+                "path": "./snippets/latex/tex_mine.json"
+            },
+            {
+                "language": ["plaintex", "tex"],
                 "path": "./snippets/latex/vscode-latex-snippets.json"
             },
             {
