@@ -54,7 +54,6 @@
     "Case_mine":{
         "prefix": "case",
         "body": [
-            "\\label{sec:}",
             "\\begin{case}{$1}{${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$2}",
             "\t\\begin{itemize}",
             "\t\t\\item JobID: $3",
