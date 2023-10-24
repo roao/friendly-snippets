@@ -285,13 +285,14 @@
         "description": "Begin - End"
     },
     "Figure": {
-        "prefix": "figure",
+        "prefix": ["figure","fig"],
         "body": [
             "\\begin{figure}[${1:htbp}]",
             "\t\\begin{center}",
             "\t\t\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
             "\t\\end{center}",
-            "\t\\caption{$4}\\label{fig:$5}",
+            "\t\\label{fig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}}",
+            "\t\\caption{$5}",
             "\\end{figure}",
             "$0"
         ],

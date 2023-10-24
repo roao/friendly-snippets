@@ -71,6 +71,25 @@
         "body": ["${1:Case}~\\ref{ca:$2}$0"],
         "description": "Case Reference"
     },
+    "SubFigure": {
+        "prefix": ["subfigure","sfig"],
+        "body": [
+            "\\begin{figure}[${1:htbp}]",
+            "\t\\begin{center}",
+            "\t\\subfloat[]{",
+            "\t\t\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
+            "\t\t\\label{sfig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}}",
+            "\t\\subfloat[]{",
+            "\t\t\\includegraphics[width=0.$5\\textwidth]{./figures/$6}",
+            "\t\t\\label{sfig:${6/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$7}}",
+            "\t\\end{center}",
+            "\t\\label{fig:$8}",
+            "\t\\caption{$9}",
+            "\\end{figure}",
+            "$0"
+        ],
+        "description": "Add a figure"
+    },
     "partial":{
       "prefix": ["pa","partial"],
       "body": "\\partial"
