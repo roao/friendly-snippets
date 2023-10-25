@@ -54,6 +54,9 @@
     "Case_mine":{
         "prefix": "case",
         "body": [
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "%Case: $1",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
             "\\begin{case}{$1}{${1/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$2}",
             "\t\\begin{itemize}",
             "\t\t\\item JobID: $3",
@@ -78,13 +81,13 @@
             "\t\\begin{center}",
             "\t\\subfloat[]{",
             "\t\t\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
-            "\t\t\\label{sfig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}}",
+            "\t\t\\label{sfig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}",
             "\t\\subfloat[]{",
             "\t\t\\includegraphics[width=0.$5\\textwidth]{./figures/$6}",
-            "\t\t\\label{sfig:${6/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$7}}",
+            "\t\t\\label{sfig:${6/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$7}",
             "\t\\end{center}",
-            "\t\\label{fig:$8}",
-            "\t\\caption{$9}",
+            "\t\\caption{$8}",
+            "\t\\label{fig:$9}",
             "\\end{figure}",
             "$0"
         ],
