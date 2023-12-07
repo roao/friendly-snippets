@@ -11,14 +11,6 @@
       "prefix": "{",
       "body": "{$1}$0"
     },
-    "_{}":{
-      "prefix": "_",
-      "body": "_{$1}$0"
-    },
-    "^{}":{
-      "prefix": "^",
-      "body": "^{$1}$0"
-    },
     "$$":{
       "prefix": "$",
       "body": "$ $1 $$0"
@@ -48,7 +40,7 @@
       "body": "^{\\prime}"
     },
     "hat{}":{
-      "prefix": "^",
+      "prefix": "hat",
       "body": "\\hat{$1}$0"
     },
     "Case_mine":{
@@ -92,6 +84,36 @@
             "$0"
         ],
         "description": "Add a figure"
+    },
+    "minipage": {
+        "prefix": ["minipage","mini"],
+        "body": [
+            "\\begin{minipage}{0.$1\\textwidth}",
+            "\t\\includegraphics[width=0.$2\\linewidth]{./figures/$3}",
+            "\\end{minipage}",
+            "$0"
+        ],
+        "description": "Add a minipage"
+    },
+    "frame": {
+        "prefix": ["frame","fr"],
+        "body": [
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\begin{frame}",
+            "\t$0",
+            "\\end{frame}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+        ],
+        "description": "Add a minipage"
+    },
+    "center": {
+        "prefix": ["center","ce"],
+        "body": [
+            "\\begin{center}",
+            "\t$0",
+            "\\end{center}"
+        ],
+        "description": "Add a minipage"
     },
     "partial":{
       "prefix": ["pa","partial"],
@@ -184,6 +206,10 @@
     "omega":{
       "prefix": ["omega","om"],
       "body": "\\omega"
+    },
+    "Omega":{
+      "prefix": ["Omega","Om"],
+      "body": "\\Omega"
     },
     "xi":{
       "prefix": "xi",
