@@ -1,7 +1,12 @@
 {
     "Align(ed)": {
         "prefix": "ali",
-        "body": ["\\begin{align}", "\t$0", "\\end{align}"],
+        "body": [
+            "\\begin{align}",
+            "\t$0",
+            "\t\\label{eq:$1}",
+            "\\end{align}"
+        ],
         "description": "Align(ed)"
     },
     "Cases": {
@@ -44,7 +49,7 @@
         "description": "Display Math"
     },
     "Equation": {
-        "prefix": "equation",
+        "prefix": "equ",
         "body": [
             "\\begin{equation}",
             "\t$0",
