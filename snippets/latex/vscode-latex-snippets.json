@@ -39,8 +39,8 @@
             "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
             "",
             "\\begin{document}",
-            "    \\maketitle",
-            "    $0",
+            "  \\maketitle",
+            "  $0",
             "\\end{document}"
         ],
         "description": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document."
@@ -99,10 +99,5 @@
             "\\end{proof}"
         ],
         "description": "Insert a proof, whose style is already defined in the template. The serial number is automatically generated according to the section."
-    },
-    "Create Align* Environment in Text": {
-        "prefix": ["aligntext", "\\aligntext"],
-        "body": ["\\begin{align*}", "\t$1", "\\end{align*}$0"],
-        "description": "Create an align environment when the context is in the text environment."
     }
 }
