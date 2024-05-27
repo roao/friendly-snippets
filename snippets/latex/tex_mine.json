@@ -27,19 +27,17 @@
         "body": [
             "\\begin{figure}[${1:htbp}]",
             "\t\\begin{center}",
-            "\t\\subfloat[]{",
-            "\t\t\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
-            "\t\t\\label{sfig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}",
-            "\t\\subfloat[]{",
-            "\t\t\\includegraphics[width=0.$5\\textwidth]{./figures/$6}",
-            "\t\t\\label{sfig:${6/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$7}",
+            "\t\\subfloat[]{\\includegraphics[width=0.$2\\textwidth]{./figures/$3}",
+            "\t\t\\label{sfig:${3/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$4}}",
+            "\t\\subfloat[]{\\includegraphics[width=0.$5\\textwidth]{./figures/$6}",
+            "\t\t\\label{sfig:${6/([a-zA-Z]+)|([^a-zA-Z]+)/${1:/downcase}${2:+_}/g}$7}}",
             "\t\\end{center}",
             "\t\\caption{$8}",
             "\t\\label{fig:$9}",
             "\\end{figure}",
             "$0"
         ],
-        "description": "Add a figure"
+        "description": "need usepackage subfig"
     },
     "minipage": {
         "prefix": ["minipage","mini"],

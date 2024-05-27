@@ -49,12 +49,13 @@
         "description": "Display Math"
     },
     "Equation": {
-        "prefix": "equ",
+        "prefix": "eq",
         "body": [
             "\\begin{equation}",
-            "\t$0",
+            "\t$2",
             "\t\\label{eq:$1}",
-            "\\end{equation}"
+            "\\end{equation}",
+            "$0"
         ],
         "description": "Add a Equation"
     },
@@ -224,7 +225,7 @@
         "description": "Section"
     },
     "Section:Ref": {
-        "prefix": ["sec:ref"],
+        "prefix": ["sec:"],
         "body": ["${1:Section}~\\ref{sec:$2}$0"],
         "description": "Section Reference"
     },
@@ -248,7 +249,7 @@
         "description": "Sub Section"
     },
     "SubSection:Ref": {
-        "prefix": ["ssec:ref"],
+        "prefix": ["ssec:"],
         "body": ["${1:SubSection}~\\ref{ssec:$2}$0"],
         "description": "SubSection Reference"
     },
@@ -262,12 +263,12 @@
         "description": "Sub Sub Section"
     },
     "SubSubSection:Ref": {
-        "prefix": ["sssec:ref"],
+        "prefix": ["sssec:"],
         "body": ["${1:SubSubSection}~\\ref{sssec:$2}$0"],
         "description": "SubSubSection Reference"
     },
     "Table:Ref": {
-        "prefix": ["table:ref", "tab:"],
+        "prefix": ["tab:"],
         "body": ["${1:Table}~\\ref{tab:$2}$0"],
         "description": "Table Reference"
     },
