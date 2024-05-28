@@ -1,5 +1,5 @@
 {
-    "Align(ed)": {
+    "Align": {
         "prefix": "ali",
         "body": [
             "\\begin{align}",
@@ -7,7 +7,16 @@
             "\t\\label{eq:$1}",
             "\\end{align}"
         ],
-        "description": "Align(ed)"
+        "description": "Align"
+    },
+    "Aligned": {
+        "prefix": "ald",
+        "body": [
+            "\\begin{aligned}",
+            "\t$0",
+            "\\end{aligned}"
+        ],
+        "description": "Aligned"
     },
     "Cases": {
         "prefix": "cas",
