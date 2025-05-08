@@ -1,4 +1,13 @@
 {
+    "import numpy and matplotlib": {
+        "prefix": "import",
+        "body": [
+            "import numpy as np",
+            "import matplotlib.pyplot as plt",
+            "${0}"
+        ],
+        "description": "Code snippet for a try/except statement"
+    },
     "try/except": {
         "prefix": "try/except",
         "body": [
